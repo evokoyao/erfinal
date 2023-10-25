@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Liberia Election Results</title>
+    <style>
+        /* Custom CSS */
+        .small-logo {
+            max-width: 100px;
+            margin: 0 auto;
+        }
+    </style>
+    <style>
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .centered-div {
+            display: block;
+            overflow: auto;
+            text-align: center;
+            margin: 0 auto;
+            box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+            background-color: white;
+            border-radius: 20px;
+        }
+
+            .centered-div img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+
+        /* Base styles for the scrolling banner */
+        .scrolling-banner {
+            background-color: red;
+            color: white;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        /* Responsive styles for smaller screens */
+        @media (max-width: 767px) {
+            .logo {
+                max-width: 100%;
+            }
+
+            .scrolling-banner {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <style>
+        body {
+            background-color: white; /* Light gray background color */
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .site-header {
+            background-color: #0071bc;
+            color: #fff;
+            border-bottom: 1px solid #e5e5e5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .site-header img {
+                max-width: 100%;
+                height: auto;
+                margin-right: 20px;
+            }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+    <style>
+        .back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            color: #FFF;
+            background: #41CAD4;
+            line-height: 30px;
+            text-align: center;
+            text-decoration: none;
+            width: 32px;
+            height: 32px;
+            border: 0;
+            border-radius: 50%;
+            display: none;
+            cursor: pointer;
+            z-index: 9999;
+        }
+
+            .back-to-top:hover {
+                background: #2DB6C0;
+            }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <div class="header">
+                    <img src="images/logo.jpg" alt="Banner Image" class="img-fluid small-logo">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="top"></div>
+
+    <!-- Scrolling banner to indicate live results -->
+    <marquee behavior="scroll" direction="left" style="background-color: red; color: white;">
+        <span style="font-size: 18px; font-weight: bold;">Live Results: IN TOTAL </span><span style="font-size: 24px; font-weight: bold;">5,886 (99.93%) of 5890</span><span style="font-size: 18px; font-weight: bold;"> polling places processed. ONLY </span><span style="font-size: 24px; font-weight: bold;"> 4 </span><span style="font-size: 18px; font-weight: bold;">polling places remaining for processing | Last update: 10/18/2023 15:30 GMT</span>
+    </marquee>
+
+    <!-- Your main content goes here -->
+    <!-- Elections Result Turnout -->
+
+    <!--<section id="turnout-county" class="content">
+        <div class="centered-div">
+            <div class="flourish-embed" data-src="story/2054615">
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+            </div>
+        </div>
+        <p class="back-to-top">
+            <a href="#top"><i class="fas fa-arrow-up"></i>Back to Top</a>
+        </p>
+    </section>
+    <br />-->
+
+    <!-- Elections Result Turnout -->
+
+    <section id="turnout-county" class="content">
+            <iframe title="Liberia - 2023 Presidential Elections Results" aria-label="Table" id="datawrapper-chart-0HeTw" src="https://datawrapper.dwcdn.net/0HeTw/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="957" data-external="1"></iframe>
+            <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++)if (e[r].contentWindow === a.source) { var i = a.data["datawrapper-height"][t] + "px"; e[r].style.height = i } } })) }();</script>
+    </section>
+    <br />
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Liberia Elections Dashboard. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
